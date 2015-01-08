@@ -9,6 +9,11 @@ $("document").ready(function(){
     $(".practice").css("background-color", "blue");
     $('p:first').css("background-color", "indigo");
     $('h1').css("background-color", "brown");
+    $('#oneButton').bind('click', alertButtonClick);
     
     
 });
+
+function alertButtonClick(){
+    alert("You clicked the button");
+};
