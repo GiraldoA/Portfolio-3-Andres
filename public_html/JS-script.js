@@ -13,7 +13,7 @@ $("document").ready(function(){
     $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
     $('#addAPara').bind('click', addAPara);
     $('#removeAPara').bind('click', removeAPara);
-    
+    $('#toggleTheText').bind('click', toggleTheText);
 });
 
 function mouseOverMe() {
@@ -36,4 +36,8 @@ function addAPara() {
 
 function removeAPara() {
     $('#randPara p:last').remove();
+}
+
+function toggleTheText() {
+    $('h4').toggle(2500);
 }
