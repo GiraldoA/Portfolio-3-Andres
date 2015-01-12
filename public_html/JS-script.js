@@ -10,10 +10,30 @@ $("document").ready(function(){
     $('p:first').css("background-color", "indigo");
     $('h1').css("background-color", "brown");
     $('#oneButton').bind('click', alertButtonClick);
-    
+    $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+    $('#addAPara').bind('click', addAPara);
+    $('#removeAPara').bind('click', removeAPara);
     
 });
 
+function mouseOverMe() {
+    $("h1").html("bwahahahaha");
+}
+
+function mouseOutMe() {
+    $('h1').html('evil laugh');
+}
+
+
 function alertButtonClick(){
     alert("You clicked the button");
-};
+}
+
+function addAPara() {
+    $('#randPara').append('<p> A paragraph</p>');
+    
+}
+
+function removeAPara() {
+    $('#randPara p:last').remove();
+}
